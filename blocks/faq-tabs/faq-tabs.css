@@ -5,12 +5,14 @@
   margin: 40px auto;
   align-items: flex-start;
 }
+
 .faq-tabs .faq-nav-side {
   width: 32%;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
 .faq-tabs .faq-nav-side .faq-tab {
   display: flex;
   align-items: center;
@@ -25,21 +27,25 @@
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
   border: 1px solid #f0f0f0;
 }
+
 .faq-tabs .faq-nav-side .faq-tab:hover {
   transform: translateY(-2px);
 }
+
 .faq-tabs .faq-nav-side .faq-tab.active {
   background-color: #0076ff;
   color: #ffffff;
   border-color: #0076ff;
   box-shadow: 0 6px 18px rgba(0, 118, 255, 0.25);
 }
+
 .faq-tabs .faq-nav-side .faq-tab .icon {
   display: inline-flex;
   width: 28px;
   height: 28px;
   margin-right: 12px;
 }
+
 .faq-tabs .faq-nav-side .faq-tab .icon img,
 .faq-tabs .faq-nav-side .faq-tab .icon svg {
   width: 100%;
@@ -47,6 +53,7 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
+
 .faq-tabs .faq-display-side {
   width: 68%;
   background-color: #ffffff;
@@ -55,12 +62,15 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   border: 1px solid #f0f0f0;
 }
+
 .faq-tabs .faq-display-side .content-box {
   display: none;
 }
+
 .faq-tabs .faq-display-side .content-box.active {
   display: block;
 }
+
 .faq-tabs .faq-display-side .content-box .tab-content-header {
   display: flex;
   align-items: center;
@@ -72,14 +82,17 @@
   border-bottom: 2px solid #0076ff;
   margin-bottom: 16px;
 }
+
 .faq-tabs .faq-display-side .content-box .tab-content-header .icon {
   width: 32px;
   height: 32px;
 }
+
 .faq-tabs .faq-display-side .content-box .q-item {
   border-bottom: 1px solid #eeeeee;
   padding: 18px 0;
 }
+
 .faq-tabs .faq-display-side .content-box .q-item .q-header {
   display: flex;
   justify-content: space-between;
@@ -89,6 +102,7 @@
      -moz-user-select: none;
           user-select: none;
 }
+
 .faq-tabs .faq-display-side .content-box .q-item .q-header .q-title {
   margin: 0;
   font-size: 16px;
@@ -97,6 +111,7 @@
   line-height: 1.4;
   padding-right: 16px;
 }
+
 .faq-tabs .faq-display-side .content-box .q-item .q-header .toggle-icon {
   display: flex;
   align-items: center;
@@ -106,34 +121,41 @@
   position: relative;
   flex-shrink: 0;
 }
+
 .faq-tabs .faq-display-side .content-box .q-item .q-header .toggle-icon::before, .faq-tabs .faq-display-side .content-box .q-item .q-header .toggle-icon::after {
   content: "";
   position: absolute;
   background-color: #0076ff;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
+
 .faq-tabs .faq-display-side .content-box .q-item .q-header .toggle-icon::before {
   width: 14px;
   height: 2px;
 }
+
 .faq-tabs .faq-display-side .content-box .q-item .q-header .toggle-icon::after {
   width: 2px;
   height: 14px;
 }
+
 .faq-tabs .faq-display-side .content-box .q-item .q-ans {
   display: none;
   padding-top: 14px;
 }
+
 .faq-tabs .faq-display-side .content-box .q-item .q-ans p {
   margin: 0;
   font-size: 14px;
   color: #555555;
   line-height: 1.6;
 }
+
 .faq-tabs .faq-display-side .content-box .q-item.open .toggle-icon::after {
   transform: rotate(90deg);
   opacity: 0;
 }
+
 .faq-tabs .faq-display-side .content-box .q-item.open .q-ans {
   display: block;
 }/*# sourceMappingURL=faq-tabs.css.map */

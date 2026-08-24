@@ -3,6 +3,7 @@
   align-items: center;
   gap: 20px;
 }
+
 .card .custom-card {
   flex: 1;
   text-align: center;
@@ -12,6 +13,7 @@
   box-shadow: 1px 2px 8px #e1e1e1;
   border-radius: 5px;
 }
+
 .card .custom-card::after {
   content: "";
   position: absolute;
@@ -22,7 +24,8 @@
   background-color: skyblue;
   transition: width 0.5s ease;
 }
-.card .custom-card__number {
+
+.card .custom-card-number {
   font-size: 46px;
   font-weight: 400;
   position: absolute;
@@ -32,22 +35,27 @@
   color: #e1e1e1;
   transition: all 0.3s ease;
 }
-.card .custom-card__image .icon {
+
+.card .custom-card-image .icon {
   height: 53px;
   width: 100%;
 }
-.card .custom-card__title {
+
+.card .custom-card-title {
   font-size: 24px;
   line-height: 30px;
 }
-.card .custom-card__description {
+
+.card .custom-card-description {
   font-size: 18px;
   line-height: 24px;
 }
+
 .card .custom-card:hover::after {
   width: 100%;
 }
-.card .custom-card:hover .custom-card__number {
+
+.card .custom-card:hover .custom-card-number {
   font-weight: 800;
   color: black;
   transform: scale(1.05);

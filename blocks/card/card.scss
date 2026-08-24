@@ -23,7 +23,7 @@
             background-color: skyblue;
             transition: width 0.5s ease;
         }
-        &__number
+        &-number
         {
             font-size: 46px;
             font-weight: 400;
@@ -34,7 +34,7 @@
             color: #e1e1e1;
             transition: all 0.3s ease;
         }
-        &__image 
+        &-image 
         {
             .icon
             {
@@ -43,11 +43,11 @@
             }
         }
         
-        &__title {
+        &-title {
             font-size: 24px;
             line-height: 30px;
         }
-        &__description
+        &-description
         {
             font-size: 18px;
             line-height: 24px;
@@ -58,7 +58,7 @@
             {
                 width: 100%;
             }
-            .custom-card__number
+            .custom-card-number
             {
                 font-weight: 800;
                 color: black;
