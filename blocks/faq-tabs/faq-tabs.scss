@@ -29,7 +29,7 @@ $border-divider: #eee;
             font-weight: 600;
             font-size: 16px;
             cursor: pointer;
-            box-shadow: 0 4px 14px rgb(0, 0, 0, 5%);
+            box-shadow: 0 4px 14px rgb(0 0 0 / 5%);
             border: 1px solid $border-light;
 
             &:hover {
@@ -40,7 +40,7 @@ $border-divider: #eee;
                 background-color: $primary-color;
                 color: $bg-white;
                 border-color: $primary-color;
-                box-shadow: 0 6px 18px rgb(0, 118, 255, 25%);
+                box-shadow: 0 6px 18px rgb(0 118 255 / 25%);
             }
 
             .icon {
@@ -63,7 +63,7 @@ $border-divider: #eee;
         background-color: $bg-white;
         border-radius: 16px;
         padding: 32px;
-        box-shadow: 0 4px 20px rgb(0, 0, 0, 6%);
+        box-shadow: 0 4px 20px rgb(0 0 0 / 6%);
         border: 1px solid $border-light;
         .content-box {
             display: none;
