@@ -1,0 +1,62 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card .custom-card {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 32px 10px;
+  border: 3px solid #e1e1e1;
+  box-shadow: 1px 2px 8px #e1e1e1;
+  border-radius: 5px;
+}
+
+.card .custom-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background-color: skyblue;
+  transition: width 0.5s ease;
+}
+
+.card .custom-card-number {
+  font-size: 46px;
+  font-weight: 400;
+  position: absolute;
+  right: 4%;
+  top: 0;
+  margin: 0;
+  color: #e1e1e1;
+  transition: all 0.3s ease;
+}
+
+.card .custom-card-image .icon {
+  height: 53px;
+  width: 100%;
+}
+
+.card .custom-card-title {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.card .custom-card-description {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.card .custom-card:hover::after {
+  width: 100%;
+}
+
+.card .custom-card:hover .custom-card-number {
+  font-weight: 800;
+  color: black;
+  transform: scale(1.05);
+}/*# sourceMappingURL=card.css.map */
