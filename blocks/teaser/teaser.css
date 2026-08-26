@@ -13,6 +13,21 @@
   min-height: 390px;
 }
 
+.teaser-container .teaser-wrapper .right-img > div {
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.teaser-container .teaser-wrapper .top-img > div {
+  flex-direction: column;
+  gap: 0;
+}
+
+.teaser-container .teaser-wrapper .bottom-img > div {
+  flex-direction: column-reverse;
+  gap: 0;
+}
+
 .teaser-container .teaser-wrapper .teaser > div > div:first-child {
   width: 52%;
   padding: 20px;
@@ -81,6 +96,18 @@
   text-transform: capitalize;
 }
 
+.teaser-container .teaser-wrapper .teaser > div > div:last-child p a:first-child {
+  padding: 13px 36px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0068c9, #7130c5);
+  color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+.teaser-container .teaser-wrapper .teaser > div > div:last-child p a:first-child:hover {
+  opacity: 0.9;
+}
+
 .teaser-container .teaser-wrapper .teaser > div > div:last-child p a:last-child {
   position: relative;
   padding-right: 25px;
@@ -102,30 +129,8 @@
   font-weight: 400;
 }
 
-.teaser-container .teaser-wrapper .teaser > div > div:last-child p a:first-child {
-  padding: 13px 36px;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #0068c9, #7130c5);
-  color: #fff;
-  transition: opacity 0.2s ease;
-}
-
-.teaser-container .teaser-wrapper .teaser > div > div:last-child p a:first-child:hover {
-  opacity: 0.9;
-}
-
-.teaser-container .teaser-wrapper .right-img > div {
-  flex-direction: row-reverse;
-  gap: 20px;
-}
-
 .teaser-container .teaser-wrapper .right-img > div > div:last-child {
-  padding: 36px 0px 20px 20px;
-}
-
-.teaser-container .teaser-wrapper .top-img > div {
-  flex-direction: column;
-  gap: 0;
+  padding: 36px 0 20px 20px;
 }
 
 .teaser-container .teaser-wrapper .top-img > div > div:first-child {
@@ -133,16 +138,11 @@
 }
 
 .teaser-container .teaser-wrapper .top-img > div > div:last-child {
-  padding: 5px 0px 0px 60px;
-}
-
-.teaser-container .teaser-wrapper .bottom-img > div {
-  flex-direction: column-reverse;
-  gap: 0;
+  padding: 5px 0 0 60px;
 }
 
 .teaser-container .teaser-wrapper .bottom-img > div > div:last-child {
-  padding: 5px 0px 0px 60px;
+  padding: 5px 0 0 60px;
 }
 
 .teaser-container .teaser-wrapper .bottom-img > div > div:first-child {

@@ -64,6 +64,7 @@
 .faq-tabs .faq-display-side .content-box {
   display: none;
 }
+
 .faq-tabs .faq-display-side .content-box.active {
   display: block;
 }
