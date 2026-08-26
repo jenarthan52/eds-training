@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .teaser-container .teaser-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -80,18 +81,6 @@
   text-transform: capitalize;
 }
 
-.teaser-container .teaser-wrapper .teaser > div > div:last-child p a:first-child {
-  padding: 13px 36px;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #0068c9, #7130c5);
-  color: #fff;
-  transition: opacity 0.2s ease;
-}
-
-.teaser-container .teaser-wrapper .teaser > div > div:last-child p a:first-child:hover {
-  opacity: 0.9;
-}
-
 .teaser-container .teaser-wrapper .teaser > div > div:last-child p a:last-child {
   position: relative;
   padding-right: 25px;
@@ -111,6 +100,18 @@
   margin-left: 8px;
   font-size: 22px;
   font-weight: 400;
+}
+
+.teaser-container .teaser-wrapper .teaser > div > div:last-child p a:first-child {
+  padding: 13px 36px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #0068c9, #7130c5);
+  color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+.teaser-container .teaser-wrapper .teaser > div > div:last-child p a:first-child:hover {
+  opacity: 0.9;
 }
 
 .teaser-container .teaser-wrapper .right-img > div {
