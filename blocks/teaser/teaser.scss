@@ -77,17 +77,6 @@
                             font-size: 17px;
                             font-weight: 600;
                             text-transform: capitalize;
-                            &:first-child
-                            {
-                                padding: 13px 36px;
-                                border-radius: 8px;
-                                background: linear-gradient(90deg, #0068c9, #7130c5);
-                                color: #fff;
-                                transition: opacity 0.2s ease;
-                                &:hover {
-                                    opacity: 0.9;
-                                }
-                            }
                             &:last-child 
                             {
                                 position: relative;
@@ -109,6 +98,17 @@
                                     font-weight: 400;
                                 }
                             }
+                            &:first-child
+                            {
+                                padding: 13px 36px;
+                                border-radius: 8px;
+                                background: linear-gradient(90deg, #0068c9, #7130c5);
+                                color: #fff;
+                                transition: opacity 0.2s ease;
+                                &:hover {
+                                    opacity: 0.9;
+                                }
+                            }                            
                         }
                     }
                 }
