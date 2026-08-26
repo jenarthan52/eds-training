@@ -104,14 +104,14 @@
   transition: opacity 0.2s ease;
 }
 
-.teaser-container .teaser-wrapper .teaser > div > div:last-child p a:first-child:hover {
-  opacity: 0.9;
-}
-
 .teaser-container .teaser-wrapper .teaser > div > div:last-child p a:last-child {
   position: relative;
   padding-right: 25px;
   color: #0068c9;
+}
+
+.teaser-container .teaser-wrapper .teaser > div > div:last-child p a:first-child:hover {
+  opacity: 0.9;
 }
 
 .teaser-container .teaser-wrapper .teaser > div > div:last-child p a:last-child:hover {
