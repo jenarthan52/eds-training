@@ -3,7 +3,6 @@ $hb-blue-dark: #0062cc;
 $hb-title: #333;
 $hb-text: #545454;
 $white: #fff;
-
 $sp-blue: #007bff;
 
 .teaser-wrapper:has(> .teaser.hero-baner) {
@@ -21,22 +20,19 @@ $sp-blue: #007bff;
   overflow: hidden;
   background: $white;
 
-  // background image 
   .hero-baner-bg {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     z-index: -1;
     margin: 0;
     padding: 0;
     pointer-events: none;
-    background-image: var(--hero-baner-bg-image); 
+    background-image: var(--hero-baner-bg-image);
     background-repeat: no-repeat;
-    background-position: -559px -286px; 
-    background-size: 149%; 
-    @media screen and (max-width: 767px) {
+    background-position: -559px -286px;
+    background-size: 149%;
+
+    @media screen and (width <= 767px) {
       background-position: 50% 50%;
       background-size: cover;
     }
@@ -61,32 +57,29 @@ $sp-blue: #007bff;
       content: '';
       position: absolute;
       inset: 0;
-      // brighter overlay
       background: linear-gradient(
         90deg,
-        rgba($white, 0.78) 0%,
-        rgba($white, 0.9) 55%,
-        $white 100%
+        rgb(255 255 255 / 65%) 100%,
+        rgb(255 255 255 / 18%) 55%,
+        rgb(255 255 255 / 85%) 100%
       );
 
-      @media screen and (max-width: 767px) {
+      @media screen and (width <= 767px) {
         background: linear-gradient(
           180deg,
-          rgba($white, 0.55) 0%,
-          rgba($white, 0.72) 55%,
-          rgba($white, 0.85) 100%
+          rgb(255 255 255 / 55%) 0%,
+          rgb(255 255 255 / 72%) 55%,
+          rgb(255 255 255 / 85%) 100%
         );
       }
-
     }
   }
 
-  // ---------- content row ----------
   .hero-baner-content {
+    display: grid;
     width: 100%;
     margin: 0 auto;
     padding: 80px 30px;
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
     gap: 40px;
@@ -96,7 +89,6 @@ $sp-blue: #007bff;
     }
   }
 
-  // ---------- text side ----------
   .hero-baner-text {
     h2 {
       margin: 0 0 35px;
@@ -122,7 +114,6 @@ $sp-blue: #007bff;
     }
   }
 
-  // ---------- CTA button ----------
   .hero-baner-cta {
     display: inline-flex;
     align-items: center;
@@ -146,7 +137,7 @@ $sp-blue: #007bff;
       background: $hb-blue-dark;
       color: $white;
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba($hb-blue, 0.35);
+      box-shadow: 0 8px 20px rgb(0 123 255 / 35%);
     }
 
     &:focus-visible {
@@ -155,7 +146,6 @@ $sp-blue: #007bff;
     }
   }
 
-  // ---------- product image ----------
   .hero-baner-media {
     display: flex;
     justify-content: flex-end;
@@ -173,7 +163,7 @@ $sp-blue: #007bff;
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (width <= 767px) {
     min-height: 360px;
 
     .hero-baner-content {
@@ -185,14 +175,14 @@ $sp-blue: #007bff;
 
     .hero-baner-text {
       h2 {
-        font-size: 32px;
         margin: 0 0 16px;
+        font-size: 32px;
         line-height: 1.2;
       }
 
       p {
-        font-size: 16px;
         margin: 0 0 24px;
+        font-size: 16px;
         line-height: 1.6;
       }
     }
@@ -214,7 +204,7 @@ $sp-blue: #007bff;
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  @media screen and (768px <= width <= 1023px) {
     min-height: 460px;
 
     .hero-baner-content {
@@ -225,13 +215,13 @@ $sp-blue: #007bff;
 
     .hero-baner-text {
       h2 {
-        font-size: 48px;
         margin: 0 0 24px;
+        font-size: 48px;
       }
 
       p {
-        font-size: 17px;
         margin: 0 0 32px;
+        font-size: 17px;
       }
     }
 
@@ -252,10 +242,10 @@ $sp-blue: #007bff;
 }
 
 .teaser.supplement {
+  overflow: hidden;
   background: $sp-blue;
   color: $white;
-  overflow: hidden;
-  font-family: 'Poppins', var(--body-font-family, sans-serif);
+  font-family: Poppins, var(--body-font-family, sans-serif);
 
   .supplement-row {
     display: grid;
@@ -272,14 +262,13 @@ $sp-blue: #007bff;
     grid-template-columns: minmax(0, 340px) auto;
     grid-template-areas:
       'title icon'
-      'desc  icon'
-      'link  link';
-    column-gap: 40px;
+      'desc icon'
+      'link link';
     align-content: center;
-    align-items: center;
-    justify-content: start;
+    place-content: center;
     padding: 80px clamp(35px, 4vw, 56px);
     background: $sp-blue;
+    gap: 0 40px;
 
     h2 {
       grid-area: title;
@@ -370,32 +359,31 @@ $sp-blue: #007bff;
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (width <= 767px) {
     .supplement-row {
       grid-template-columns: minmax(0, 1fr);
       min-height: 0;
     }
 
     .supplement-text {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      'title'
-      'desc'
-      'link'
-      'icon';
-    column-gap: 0;
-    row-gap: 12px;
-    justify-items: center;
-    text-align: center;
-    padding: 32px 20px;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas:
+        'title'
+        'desc'
+        'link'
+        'icon';
+      gap: 12px 0;
+      justify-items: center;
+      text-align: center;
+      padding: 32px 20px;
 
-    h2 {
-      max-width: 10em;
-      margin: 0;
-      font-size: 24px;
-      line-height: 1.25;
+      h2 {
+        max-width: 10em;
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.25;
+      }
     }
-  }
 
     .supplement-desc {
       font-size: 16px;
@@ -423,36 +411,35 @@ $sp-blue: #007bff;
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  @media screen and (768px <= width <= 1023px) {
     .supplement-row {
       grid-template-columns: minmax(0, 1fr);
       min-height: 0;
     }
 
     .supplement-text {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      'title'
-      'desc'
-      'link'
-      'icon';
-    column-gap: 0;
-    row-gap: 14px;
-    justify-items: center;
-    text-align: center;
-    padding: 48px 24px;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas:
+        'title'
+        'desc'
+        'link'
+        'icon';
+      gap: 14px 0;
+      justify-items: center;
+      text-align: center;
+      padding: 48px 24px;
 
-    h2 {
-      max-width: 10em;
-      margin: 0;
-      font-size: 34px;
+      h2 {
+        max-width: 10em;
+        margin: 0;
+        font-size: 34px;
+      }
     }
-  }
 
     .supplement-desc {
+      padding: 10px 30px;
       font-size: 20px;
       line-height: 1.7;
-      padding: 10px 30px;
     }
 
     .supplement-icon {

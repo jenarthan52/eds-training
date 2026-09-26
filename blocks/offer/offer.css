@@ -67,7 +67,7 @@
 @media screen and (max-width: 767px) {
   .offer .offer-content {
     row-gap: 6px;
-    padding: 110px 20px 20px 20px;
+    padding: 110px 20px 20px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {

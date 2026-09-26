@@ -11,7 +11,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 /* ===== TOP background ===== */
@@ -46,7 +46,7 @@ footer .footer-logo {
   gap: 8px;
   font-size: 22px;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   margin: 0 0 16px;
 }
 
@@ -54,6 +54,20 @@ footer .footer-logo .icon {
   display: inline-flex;
   width: 72%;
   height: 100%;
+}
+
+footer .footer-payment img {
+  height: 28px;
+  width: auto;
+  max-width: 100%;
+}
+
+footer .footer-post-image img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
 }
 
 footer .footer-logo .icon img {
@@ -92,7 +106,7 @@ footer .footer-social .icon img {
 
 /* ===== Column headings ===== */
 footer .custom-footer h3 {
-  color: #ffffff;
+  color: #fff;
   font-size: 18px;
   font-weight: 600;
   margin: 0 0 20px;
@@ -157,14 +171,6 @@ footer .footer-post-image {
   flex-shrink: 0;
 }
 
-footer .footer-post-image img {
-  width: 100px;
-  height: 70px;
-  object-fit: cover;
-  border-radius: 4px;
-  display: block;
-}
-
 footer .footer-post-text {
   display: flex;
   flex-direction: column;
@@ -175,7 +181,7 @@ footer .footer-post-text {
 footer .footer-post-title {
   font-size: 16px;
   font-weight: 500;
-  color: #ffffff;
+  color: #fff;
   margin: 0;
   line-height: 1.2;
 }
@@ -226,13 +232,7 @@ footer .footer-payment {
   margin: 0;
 }
 
-footer .footer-payment img {
-  height: 28px;
-  width: auto;
-  max-width: 100%;
-}
-
-@media screen and (max-width: 767px) {
+@media screen and (width >= 768px) {
   footer .custom-footer {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -257,7 +257,7 @@ footer .footer-payment img {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media (768px <= width <= 1024px) {
   footer .custom-footer {
     grid-template-columns: 1fr 1fr;
     gap: 32px 24px;

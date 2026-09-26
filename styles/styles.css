@@ -297,7 +297,7 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 0px 0;
+  margin: 0;
 }
 
 main > .section > div {
@@ -307,7 +307,7 @@ main > .section > div {
 }
 
 main > .section:first-of-type {
-  margin-top: 0;
+  margin-top: 1px;
 }
 
 @media (width >= 900px) {

@@ -16,10 +16,7 @@
 }
 .teaser.hero-baner .hero-baner-bg {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: -1;
   margin: 0;
   padding: 0;
@@ -29,7 +26,7 @@
   background-position: -559px -286px;
   background-size: 149%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .teaser.hero-baner .hero-baner-bg {
     background-position: 50% 50%;
     background-size: cover;
@@ -53,18 +50,18 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.9) 55%, #fff 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.65) 100%, rgba(255, 255, 255, 0.18) 55%, rgba(255, 255, 255, 0.85) 100%);
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .teaser.hero-baner .hero-baner-bg::after {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.72) 55%, rgba(255, 255, 255, 0.85) 100%);
   }
 }
 .teaser.hero-baner .hero-baner-content {
+  display: grid;
   width: 100%;
   margin: 0 auto;
   padding: 80px 30px;
-  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
   gap: 40px;
@@ -135,7 +132,7 @@
   width: 100%;
   height: auto;
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .teaser.hero-baner {
     min-height: 360px;
   }
@@ -146,13 +143,13 @@
     text-align: center;
   }
   .teaser.hero-baner .hero-baner-text h2 {
-    font-size: 32px;
     margin: 0 0 16px;
+    font-size: 32px;
     line-height: 1.2;
   }
   .teaser.hero-baner .hero-baner-text p {
-    font-size: 16px;
     margin: 0 0 24px;
+    font-size: 16px;
     line-height: 1.6;
   }
   .teaser.hero-baner .hero-baner-cta {
@@ -169,7 +166,7 @@
     padding-top: 35px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (768px <= width <= 1023px) {
   .teaser.hero-baner {
     min-height: 460px;
   }
@@ -179,12 +176,12 @@
     gap: 32px;
   }
   .teaser.hero-baner .hero-baner-text h2 {
-    font-size: 48px;
     margin: 0 0 24px;
+    font-size: 48px;
   }
   .teaser.hero-baner .hero-baner-text p {
-    font-size: 17px;
     margin: 0 0 32px;
+    font-size: 17px;
   }
   .teaser.hero-baner .hero-baner-media {
     justify-content: center;
@@ -201,10 +198,10 @@
 }
 
 .teaser.supplement {
+  overflow: hidden;
   background: #007bff;
   color: #fff;
-  overflow: hidden;
-  font-family: "Poppins", var(--body-font-family, sans-serif);
+  font-family: Poppins, var(--body-font-family, sans-serif);
 }
 .teaser.supplement .supplement-row {
   display: grid;
@@ -217,14 +214,12 @@
 .teaser.supplement .supplement-text {
   display: grid;
   grid-template-columns: minmax(0, 340px) auto;
-  grid-template-areas: "title icon" "desc  icon" "link  link";
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  grid-template-areas: "title icon" "desc icon" "link link";
   align-content: center;
-  align-items: center;
-  justify-content: start;
+  place-content: center;
   padding: 80px clamp(35px, 4vw, 56px);
   background: #007bff;
+  gap: 0 40px;
 }
 .teaser.supplement .supplement-text h2 {
   grid-area: title;
@@ -302,7 +297,7 @@
   -o-object-position: 95% 53%;
      object-position: 95% 53%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .teaser.supplement .supplement-row {
     grid-template-columns: minmax(0, 1fr);
     min-height: 0;
@@ -310,9 +305,7 @@
   .teaser.supplement .supplement-text {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "title" "desc" "link" "icon";
-    -moz-column-gap: 0;
-         column-gap: 0;
-    row-gap: 12px;
+    gap: 12px 0;
     justify-items: center;
     text-align: center;
     padding: 32px 20px;
@@ -343,7 +336,7 @@
     min-height: 220px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (768px <= width <= 1023px) {
   .teaser.supplement .supplement-row {
     grid-template-columns: minmax(0, 1fr);
     min-height: 0;
@@ -351,9 +344,7 @@
   .teaser.supplement .supplement-text {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "title" "desc" "link" "icon";
-    -moz-column-gap: 0;
-         column-gap: 0;
-    row-gap: 14px;
+    gap: 14px 0;
     justify-items: center;
     text-align: center;
     padding: 48px 24px;
@@ -364,9 +355,9 @@
     font-size: 34px;
   }
   .teaser.supplement .supplement-desc {
+    padding: 10px 30px;
     font-size: 20px;
     line-height: 1.7;
-    padding: 10px 30px;
   }
   .teaser.supplement .supplement-icon {
     margin: 42px 0 0 30px;

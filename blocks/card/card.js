@@ -45,24 +45,20 @@ export default function decorate(block) {
       priceRow.appendChild(rating);
     });
   }
-
+  // article section
   if (block.classList.contains('article')) {
     cards.forEach((card) => {
       const imageWrapper = card.querySelector('.custom-card-image-wrapper');
- 
       const date = card.querySelector('.custom-card-description');
       if (date) {
         date.classList.add('article-date');
         imageWrapper?.appendChild(date);
       }
- 
       const meta = [...card.querySelectorAll('p')].find((p) => p.querySelector('picture'));
       if (meta) {
         meta.classList.add('article-meta');
- 
         const avatar = meta.querySelector('picture');
         const text = meta.textContent.replace(/^[\s\-–—]+/, '').replace(/\s+/g, ' ').trim();
- 
         let author;
         let category;
         if (text.includes('|')) {
@@ -74,32 +70,24 @@ export default function decorate(block) {
           author = first;
           category = rest.join(' ');
         }
- 
         meta.textContent = '';
- 
         const avatarWrapper = document.createElement('span');
         avatarWrapper.classList.add('article-avatar');
         avatarWrapper.appendChild(avatar);
- 
         const authorEl = document.createElement('span');
         authorEl.classList.add('article-author');
         authorEl.textContent = `- ${author}`;
- 
         meta.append(avatarWrapper, authorEl);
- 
         if (category) {
           const divider = document.createElement('span');
           divider.classList.add('article-divider');
           divider.setAttribute('aria-hidden', 'true');
- 
           const categoryEl = document.createElement('span');
           categoryEl.classList.add('article-category');
           categoryEl.textContent = category;
- 
           meta.append(divider, categoryEl);
         }
       }
- 
       const heading = card.querySelector('h1, h2, h3, h4, h5, h6');
       heading?.classList.add('article-title');
     });

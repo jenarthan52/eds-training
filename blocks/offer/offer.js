@@ -1,6 +1,6 @@
 export default function decorate(block) {
   const row = block.firstElementChild;
-  if (!row) return; 
+  if (!row) return;
   row.classList.add('offer-band');
 
   const cell = row.firstElementChild;

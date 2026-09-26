@@ -1,5 +1,4 @@
 export default function decorate(block) {
-
   if (!block.classList.contains('shopping')) return;
 
   const items = [...block.children];

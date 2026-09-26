@@ -1,6 +1,6 @@
 function decorateHeroBaner(block) {
   const [bgRow, contentRow] = [...block.children];
-  if (!bgRow || !contentRow) return; 
+  if (!bgRow || !contentRow) return;
 
   // background row (decorative)
   bgRow.classList.add('hero-baner-bg');
@@ -79,6 +79,5 @@ export default function decorate(block) {
 
   if (block.classList.contains('supplement')) {
     decorateSupplement(block);
-    return;
   }
 }
