@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="180 115 240 478" width="100%" height="100%">
+  <defs>
+    <!-- Base Shadow -->
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.45"/>
+      <stop offset="60%" stop-color="#000000" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glossy Plastic Bottle Body Gradient -->
+    <linearGradient id="jarBaseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#08080a"/>
+      <stop offset="6%" stop-color="#1c1e22"/>
+      <stop offset="16%" stop-color="#3a3e47"/>
+      <stop offset="28%" stop-color="#676d7c"/>
+      <stop offset="38%" stop-color="#23252a"/>
+      <stop offset="65%" stop-color="#16181b"/>
+      <stop offset="84%" stop-color="#464b56"/>
+      <stop offset="94%" stop-color="#1e2024"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </linearGradient>
+
+    <!-- Ribbed Cap Base Gradient -->
+    <linearGradient id="capLinear" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#141518"/>
+      <stop offset="15%" stop-color="#383c44"/>
+      <stop offset="32%" stop-color="#565c69"/>
+      <stop offset="48%" stop-color="#1d2025"/>
+      <stop offset="78%" stop-color="#3c414a"/>
+      <stop offset="94%" stop-color="#1e2024"/>
+      <stop offset="100%" stop-color="#0f1012"/>
+    </linearGradient>
+
+    <!-- Cap Rib Knurling Pattern -->
+    <pattern id="knurl" width="4.5" height="70" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="2.2" height="70" fill="#0b0c0d"/>
+      <rect x="2.2" y="0" width="2.3" height="70" fill="#4d535e" opacity="0.6"/>
+    </pattern>
+
+    <!-- Yellow / Mustard Label Gradient -->
+    <linearGradient id="yellowLabelGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e09e1f"/>
+      <stop offset="25%" stop-color="#f5be38"/>
+      <stop offset="60%" stop-color="#fac844"/>
+      <stop offset="90%" stop-color="#e2a322"/>
+      <stop offset="100%" stop-color="#ce8e18"/>
+    </linearGradient>
+
+    <!-- Dark Navy Label Gradient -->
+    <linearGradient id="navyLabelGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#191c26"/>
+      <stop offset="50%" stop-color="#212634"/>
+      <stop offset="100%" stop-color="#14161f"/>
+    </linearGradient>
+
+    <!-- Clip Paths for Label Stripes -->
+    <clipPath id="yellowPanelClip">
+      <rect x="188" y="248" width="82" height="310"/>
+    </clipPath>
+
+    <clipPath id="navyPanelClip">
+      <rect x="270" y="254" width="142" height="298"/>
+    </clipPath>
+  </defs>
+
+  <!-- Ground Contact Shadow -->
+  <ellipse cx="300" cy="587" rx="115" ry="8" fill="url(#floorShadow)"/>
+
+  <!-- Main Glossy Bottle Body -->
+  <path d="M 188 288 C 188 220, 222 205, 260 205 L 340 205 C 378 205, 412 220, 412 288 L 412 538 C 412 578, 386 588, 344 588 L 256 588 C 214 588, 188 578, 188 538 Z" fill="url(#jarBaseGrad)"/>
+
+  <!-- High Gloss Curved Highlight on Shoulder -->
+  <path d="M 205 282 C 215 228, 246 215, 300 215" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0.32"/>
+  <ellipse cx="300" cy="214" rx="72" ry="7" fill="#ffffff" opacity="0.08"/>
+
+  <!-- ==================== LABEL SECTION START ==================== -->
+  <!-- Yellow Left Background Base -->
+  <rect x="188" y="250" width="224" height="306" fill="url(#yellowLabelGrad)"/>
+
+  <!-- Left Top Diagonal Stripes on Yellow Area -->
+  <g clip-path="url(#yellowPanelClip)" stroke="#1a1c22" stroke-width="4.2">
+    <line x1="165" y1="262" x2="210" y2="217"/>
+    <line x1="165" y1="277" x2="210" y2="232"/>
+    <line x1="165" y1="292" x2="210" y2="247"/>
+    <line x1="165" y1="307" x2="210" y2="262"/>
+    <line x1="165" y1="322" x2="210" y2="277"/>
+    <line x1="165" y1="337" x2="210" y2="292"/>
+  </g>
+
+  <!-- Yellow Inner Sheen -->
+  <rect x="206" y="250" width="38" height="306" fill="#ffe277" opacity="0.45"/>
+
+  <!-- Center-Right Dark Navy Label Block -->
+  <rect x="270" y="254" width="142" height="298" rx="2" fill="url(#navyLabelGrad)"/>
+
+  <!-- Bottom-Right Yellow Diagonal Stripes on Navy Block -->
+  <g clip-path="url(#navyPanelClip)" stroke="#f6c139" stroke-width="3.8">
+    <line x1="355" y1="575" x2="435" y2="495"/>
+    <line x1="370" y1="575" x2="450" y2="495"/>
+    <line x1="385" y1="575" x2="465" y2="495"/>
+    <line x1="400" y1="575" x2="480" y2="495"/>
+    <line x1="415" y1="575" x2="495" y2="495"/>
+  </g>
+
+  <!-- Dark Circular Badge "50" -->
+  <circle cx="236" cy="333" r="26.5" fill="#383d47"/>
+  <text x="236" y="342.5" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial Black', sans-serif" 
+        font-size="24.5" 
+        font-weight="900" 
+        fill="#f8cb43" 
+        text-anchor="middle">50</text>
+
+  <!-- Main Heading: MULTI- -->
+  <text x="278" y="318" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Arial Black', sans-serif" 
+        font-size="23.5" 
+        font-weight="900" 
+        letter-spacing="0.5" 
+        fill="#f4bd35">MULTI-</text>
+
+  <!-- Main Heading: VITAMINS -->
+  <text x="278" y="343" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Arial Black', sans-serif" 
+        font-size="23.5" 
+        font-weight="900" 
+        letter-spacing="0.5" 
+        fill="#f4bd35">VITAMINS</text>
+
+  <!-- Subheading: CAPSULES -->
+  <text x="279" y="360.5" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial', sans-serif" 
+        font-size="9" 
+        font-weight="800" 
+        letter-spacing="5.6" 
+        fill="#ffffff" 
+        opacity="0.95">CAPSULES</text>
+
+  <!-- 3 Green Specification Pills -->
+  <rect x="284" y="380" width="74" height="13.5" rx="6.75" fill="#32b57a"/>
+  <text x="321" y="389.8" font-family="'Arial', sans-serif" font-size="5.7" font-weight="800" fill="#132c1e" text-anchor="middle" letter-spacing="0.4">HIGH POTANCY</text>
+
+  <rect x="284" y="399" width="74" height="13.5" rx="6.75" fill="#32b57a"/>
+  <text x="321" y="408.8" font-family="'Arial', sans-serif" font-size="5.7" font-weight="800" fill="#132c1e" text-anchor="middle" letter-spacing="0.4">50+ INGREDIENTS</text>
+
+  <rect x="284" y="418" width="74" height="13.5" rx="6.75" fill="#32b57a"/>
+  <text x="321" y="427.8" font-family="'Arial', sans-serif" font-size="5.4" font-weight="800" fill="#132c1e" text-anchor="middle" letter-spacing="0.3">CLINICALLY PROVEN</text>
+
+  <!-- DIETARY SUPPLEMENT Typography -->
+  <text x="284" y="469" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial Black', sans-serif" 
+        font-size="11.5" 
+        font-weight="900" 
+        letter-spacing="0.8" 
+        fill="#f4bd35">DIETARY</text>
+
+  <text x="284" y="484" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial Black', sans-serif" 
+        font-size="11.5" 
+        font-weight="900" 
+        letter-spacing="0.8" 
+        fill="#f4bd35">SUPPLEMENT</text>
+  <!-- ===================== LABEL SECTION END ===================== -->
+
+  <!-- Plastic Surface Cylindrical Gloss -->
+  <path d="M 191 280 L 191 550" stroke="#ffffff" stroke-width="4.5" opacity="0.16" stroke-linecap="round"/>
+  <path d="M 409 280 L 409 550" stroke="#ffffff" stroke-width="2.5" opacity="0.12" stroke-linecap="round"/>
+
+  <!-- Bottom Curved Rim Highlight -->
+  <path d="M 210 580 Q 300 592 390 580" stroke="#505763" stroke-width="3" fill="none" opacity="0.55"/>
+
+  <!-- ==================== FULLY CLOSED BLACK CAP ==================== -->
+  <!-- Cap Top Rim -->
+  <ellipse cx="300" cy="126" rx="79" ry="10" fill="#363a42"/>
+  <ellipse cx="300" cy="124" rx="77" ry="8.5" fill="#1a1c20"/>
+
+  <!-- Cap Cylindrical Main Wall (Positioned directly down on shoulder) -->
+  <rect x="221" y="125" width="158" height="78" rx="6" fill="url(#capLinear)"/>
+
+  <!-- Cap Knurled / Ribbed Pattern Overlay -->
+  <rect x="221" y="127" width="158" height="70" fill="url(#knurl)"/>
+
+  <!-- Cap Highlights -->
+  <rect x="244" y="125" width="20" height="78" fill="#ffffff" opacity="0.08"/>
+  <rect x="335" y="125" width="16" height="78" fill="#ffffff" opacity="0.05"/>
+
+  <!-- Cap Lower Ring Touching Bottle Body -->
+  <rect x="221" y="197" width="158" height="7" fill="#0f1013"/>
+  <line x1="221" y1="197" x2="379" y2="197" stroke="#3d424b" stroke-width="1.2"/>
+  <path d="M 221 204 C 221 210, 379 210, 379 204" stroke="#000000" stroke-width="2" fill="none" opacity="0.7"/>
+</svg>

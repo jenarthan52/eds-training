@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 140" width="100%" height="100%">
+  <!-- Left Side: Supplement Container & Bottle Icon -->
+  <g id="supplement-icons">
+    <!-- Big Jar Body -->
+    <!-- Jar Cap -->
+    <rect x="18" y="4" width="70" height="18" rx="3" fill="#a4c6ff" />
+    <path d="M 23 4 v 18 M 31 4 v 18 M 39 4 v 18 M 47 4 v 18 M 55 4 v 18 M 63 4 v 18 M 71 4 v 18 M 79 4 v 18 M 84 4 v 18" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" />
+    <!-- Jar Neck -->
+    <path d="M 20 22 L 86 22 L 95 38 L 11 38 Z" fill="#007bff" />
+    <!-- Jar Main Body -->
+    <rect x="8" y="36" width="90" height="98" rx="8" fill="#007bff" />
+    
+    <!-- Jar Label -->
+    <rect x="8" y="65" width="85" height="42" fill="#d9d9d9" />
+    
+    <!-- Dumbbell Icon on Label -->
+    <g id="dumbbell" fill="#007bff">
+      <!-- Left weights -->
+      <rect x="22" y="77" width="5" height="18" rx="2" />
+      <rect x="29" y="73" width="7" height="26" rx="2" />
+      <!-- Bar -->
+      <rect x="36" y="83" width="26" height="6" />
+      <!-- Right weights -->
+      <rect x="62" y="73" width="7" height="26" rx="2" />
+      <rect x="71" y="77" width="5" height="18" rx="2" />
+      <!-- Dumbbell Inner Highlights -->
+      <line x1="24.5" y1="80" x2="24.5" y2="92" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+      <line x1="73.5" y1="80" x2="73.5" y2="92" stroke="#ffffff" stroke-width="1" stroke-linecap="round"/>
+    </g>
+
+    <!-- Small Energy Bottle (Front Right) -->
+    <g id="small-bottle">
+      <!-- Cap -->
+      <rect x="89" y="58" width="30" height="14" rx="2" fill="#007bff" />
+      <!-- Neck -->
+      <path d="M 89 72 L 119 72 L 126 84 L 82 84 Z" fill="#007bff" />
+      <!-- Bottle Body -->
+      <rect x="82" y="82" width="44" height="52" rx="4" fill="#007bff" />
+      <!-- Bottom Base Strip -->
+      <rect x="82" y="126" width="44" height="8" rx="2" fill="#a4c6ff" />
+      <!-- Lightning Bolt / Energy Symbol -->
+      <polygon points="105,94 97,107 103,107 101,120 111,105 105,105" fill="#fbd634" />
+    </g>
+  </g>
+
+  <!-- Right Side: Text "Dawa" -->
+  <text x="175" y="130" 
+        fill="#007bff" 
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Montserrat', 'Inter', 'Segoe UI', Arial, sans-serif" 
+        font-size="160" 
+        font-weight="900" 
+        letter-spacing="-3">Dawa</text>
+</svg>

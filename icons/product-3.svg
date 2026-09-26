@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <!-- Ground Shadow -->
+    <radialGradient id="bottleShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.35"/>
+      <stop offset="65%" stop-color="#000000" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Metallic Silver Cap Gradient -->
+    <linearGradient id="silverCap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7a7f85"/>
+      <stop offset="15%" stop-color="#b8bec6"/>
+      <stop offset="35%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#8a9096"/>
+      <stop offset="80%" stop-color="#dce1e7"/>
+      <stop offset="95%" stop-color="#a4abb2"/>
+      <stop offset="100%" stop-color="#5f6368"/>
+    </linearGradient>
+
+    <!-- Cobalt Blue Bottle Gradient -->
+    <linearGradient id="blueBottle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#050a30"/>
+      <stop offset="12%" stop-color="#0a196f"/>
+      <stop offset="28%" stop-color="#183ec9"/>
+      <stop offset="50%" stop-color="#0b2282"/>
+      <stop offset="78%" stop-color="#143cb8"/>
+      <stop offset="92%" stop-color="#081459"/>
+      <stop offset="100%" stop-color="#03061f"/>
+    </linearGradient>
+
+    <!-- White Label Cylindrical Gradient -->
+    <linearGradient id="labelCylinder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d5dae0"/>
+      <stop offset="8%" stop-color="#f2f5f8"/>
+      <stop offset="25%" stop-color="#ffffff"/>
+      <stop offset="80%" stop-color="#ffffff"/>
+      <stop offset="94%" stop-color="#f0f3f6"/>
+      <stop offset="100%" stop-color="#ced4db"/>
+    </linearGradient>
+
+    <!-- Glass Reflection Line -->
+    <linearGradient id="glassGloss" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Drop Shadow -->
+  <ellipse cx="300" cy="600" rx="125" ry="12" fill="url(#bottleShadow)"/>
+
+  <!-- Bottle Neck (Deep Blue) -->
+  <rect x="226" y="210" width="148" height="35" rx="8" fill="#0c1d7a"/>
+
+  <!-- Blue Glass Bottle Base Body -->
+  <rect x="190" y="235" width="220" height="340" rx="42" fill="url(#blueBottle)"/>
+
+  <!-- Bottom Glass Rim Curve/Depth -->
+  <path d="M 210 572 Q 300 584 390 572" stroke="#4870ff" stroke-width="4" fill="none" opacity="0.45"/>
+
+  <!-- Wrapped White Paper Label -->
+  <rect x="190" y="278" width="220" height="268" rx="5" fill="url(#labelCylinder)"/>
+
+  <!-- Label Edge Shading (Left & Right Curve Depth) -->
+  <rect x="190" y="278" width="10" height="268" fill="#000000" opacity="0.08"/>
+  <rect x="400" y="278" width="10" height="268" fill="#000000" opacity="0.12"/>
+
+  <!-- Label Brand: Nature Gift -->
+  <g id="brand-nature-gift">
+    <text x="290" y="306" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Arial', sans-serif" 
+          font-size="14" 
+          font-weight="600" 
+          fill="#0090c8" 
+          letter-spacing="0.5" 
+          text-anchor="middle">Nature</text>
+    
+    <!-- Green Leaf Icon -->
+    <path d="M 314 303 C 314 297, 321 294, 326 295 C 327 301, 322 305, 314 303 Z" fill="#5cb85c"/>
+    <path d="M 314 303 Q 320 299 324 296" stroke="#ffffff" stroke-width="0.7" fill="none"/>
+
+    <text x="340" y="306" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Montserrat', 'Arial', sans-serif" 
+          font-size="14" 
+          font-weight="600" 
+          fill="#444b54" 
+          letter-spacing="0.5" 
+          text-anchor="middle">Gift</text>
+  </g>
+
+  <!-- Vector Brain Illustration -->
+  <g id="brain-artwork" transform="translate(258, 335) scale(0.62)" stroke="#2b99d6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Brain Outline Profile -->
+    <path d="M 68 100 C 65 92 68 85 70 80 C 66 70 72 60 85 62 C 92 50 108 50 118 60 C 128 52 142 56 148 68 C 158 68 165 78 162 88 C 168 98 160 110 152 115 C 155 125 145 138 132 136 C 125 144 112 144 105 138 C 98 142 85 138 80 130 C 70 128 65 116 68 100 Z"/>
+    <!-- Cerebellum / Stem Base -->
+    <path d="M 112 138 C 115 152 120 162 124 172 C 120 174 116 172 114 165 C 110 155 106 148 105 138"/>
+    <path d="M 110 150 L 122 153 M 112 160 L 120 162"/>
+    <!-- Gyri / Brain Folds & Wrinkles -->
+    <path d="M 85 75 C 92 78 95 88 90 95 C 84 100 88 112 96 110 C 104 108 108 95 102 88 C 98 80 108 72 116 78"/>
+    <path d="M 120 65 C 124 75 130 80 136 78 C 142 75 145 84 140 92 C 132 94 130 105 138 108 C 145 110 148 122 138 126"/>
+    <path d="M 100 88 C 110 92 115 102 110 112 C 105 120 115 128 124 125"/>
+    <path d="M 80 98 C 88 98 90 106 86 114 C 82 120 92 124 95 122"/>
+    <path d="M 118 95 C 126 95 128 104 124 112"/>
+    <path d="M 135 85 C 142 88 148 95 145 102"/>
+  </g>
+
+  <!-- Title: MIND MATRIX -->
+  <text x="300" y="472" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial Black', 'Montserrat', sans-serif" 
+        font-size="29" 
+        font-weight="900" 
+        letter-spacing="2" 
+        fill="#3e434a" 
+        text-anchor="middle">MIND</text>
+  
+  <text x="300" y="500" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial Black', 'Montserrat', sans-serif" 
+        font-size="25" 
+        font-weight="900" 
+        letter-spacing="3" 
+        fill="#3e434a" 
+        text-anchor="middle">MATRIX</text>
+
+  <!-- Features Grid (3 Columns) -->
+  <!-- Col 1: Maximizes -->
+  <text x="235" y="525" font-family="'Arial', sans-serif" font-size="9" font-weight="800" fill="#009fd9" text-anchor="middle">Maximizes</text>
+  <text x="235" y="535" font-family="'Arial', sans-serif" font-size="6.5" font-weight="600" fill="#555c66" text-anchor="middle">Mental Clarity*</text>
+
+  <!-- Col 2: Boosts -->
+  <text x="300" y="519" font-family="'Arial', sans-serif" font-size="10" font-weight="800" fill="#009fd9" text-anchor="middle">Boosts</text>
+  <text x="300" y="529" font-family="'Arial', sans-serif" font-size="6.5" font-weight="600" fill="#555c66" text-anchor="middle">Focus and</text>
+  <text x="300" y="538" font-family="'Arial', sans-serif" font-size="6.5" font-weight="600" fill="#555c66" text-anchor="middle">Intelligence*</text>
+
+  <!-- Col 3: Improves -->
+  <text x="365" y="525" font-family="'Arial', sans-serif" font-size="9" font-weight="800" fill="#009fd9" text-anchor="middle">Improves</text>
+  <text x="365" y="535" font-family="'Arial', sans-serif" font-size="6.5" font-weight="600" fill="#555c66" text-anchor="middle">Memory &amp; Mood*</text>
+
+  <!-- Thin Separator Rule -->
+  <line x1="220" y1="556" x2="380" y2="556" stroke="#b0b8c2" stroke-width="0.7"/>
+
+  <!-- Footer Info -->
+  <text x="220" y="552" font-family="'Arial', sans-serif" font-size="8" font-weight="500" fill="#44474d">Dietary Supplement</text>
+
+  <!-- 60 Capsules Badge -->
+  <g transform="translate(372, 552)">
+    <ellipse cx="0" cy="0" rx="14" ry="14" fill="#575b61"/>
+    <text x="0" y="-1" font-family="'Arial', sans-serif" font-size="9.5" font-weight="800" fill="#ffffff" text-anchor="middle">60</text>
+    <text x="0" y="7.5" font-family="'Arial', sans-serif" font-size="4.5" font-weight="700" fill="#ffffff" letter-spacing="0.5" text-anchor="middle">CAPSULES</text>
+  </g>
+
+  <!-- Bottle Highlights & Specular Reflections -->
+  <!-- Left Side Glossy Highlight -->
+  <path d="M 194 285 L 194 540" stroke="url(#glassGloss)" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- Shoulder Reflection -->
+  <path d="M 215 250 C 235 238 275 236 300 236" stroke="#ffffff" stroke-width="2.5" opacity="0.35" stroke-linecap="round" fill="none"/>
+
+  <!-- Metallic Lid / Cap -->
+  <!-- Cap Top Oval Surface -->
+  <ellipse cx="300" cy="162" rx="79" ry="11" fill="#c3c8cf"/>
+  <ellipse cx="300" cy="161" rx="77" ry="9.5" fill="#e9edf2"/>
+
+  <!-- Cap Cylindrical Body -->
+  <path d="M 221 162 L 221 202 C 221 216 379 216 379 202 L 379 162 Z" fill="url(#silverCap)"/>
+  
+  <!-- Lid Bottom Edge Rim & Shadow -->
+  <path d="M 221 202 C 221 216 379 216 379 202" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path d="M 221 204 C 221 218 379 218 379 204" stroke="#1c1f24" stroke-width="2" fill="none"/>
+</svg>

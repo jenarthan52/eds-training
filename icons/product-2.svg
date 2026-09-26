@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 650" width="100%" height="100%">
+  <defs>
+    <!-- Base Shadow -->
+    <radialGradient id="jarShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.45"/>
+      <stop offset="70%" stop-color="#000000" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Metallic Lid Gradient -->
+    <linearGradient id="silverLid" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#73797f"/>
+      <stop offset="15%" stop-color="#b6bec6"/>
+      <stop offset="35%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#8a9199"/>
+      <stop offset="80%" stop-color="#d5dbe2"/>
+      <stop offset="95%" stop-color="#9ea6ad"/>
+      <stop offset="100%" stop-color="#60666c"/>
+    </linearGradient>
+
+    <!-- Matte Black Bottle Body -->
+    <linearGradient id="blackJarBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#111215"/>
+      <stop offset="8%" stop-color="#282a30"/>
+      <stop offset="25%" stop-color="#3d4047"/>
+      <stop offset="60%" stop-color="#23252a"/>
+      <stop offset="88%" stop-color="#383b42"/>
+      <stop offset="100%" stop-color="#121316"/>
+    </linearGradient>
+
+    <!-- Metallic Neck Ring -->
+    <linearGradient id="jarNeck" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1a1c"/>
+      <stop offset="20%" stop-color="#3b3d42"/>
+      <stop offset="50%" stop-color="#1e1f22"/>
+      <stop offset="80%" stop-color="#3b3d42"/>
+      <stop offset="100%" stop-color="#151618"/>
+    </linearGradient>
+
+    <!-- Cyan Glow Gradient for Accent Text -->
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#72f6ff"/>
+      <stop offset="100%" stop-color="#00b4db"/>
+    </linearGradient>
+
+    <!-- Subtle Label Pattern -->
+    <pattern id="triangleGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 0 0 L 10 20 L 20 0 Z" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.04"/>
+      <path d="M 10 20 L 20 0 L 0 0 Z" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.03"/>
+    </pattern>
+  </defs>
+
+  <!-- Ground Drop Shadow -->
+  <ellipse cx="300" cy="528" rx="140" ry="12" fill="url(#jarShadow)"/>
+
+  <!-- Bottle Neck (Connects Lid to Body) -->
+  <rect x="210" y="160" width="180" height="25" rx="6" fill="url(#jarNeck)"/>
+
+  <!-- Main Matte Jar Body -->
+  <!-- Top Dome / Shoulder -->
+  <path d="M 180 235 C 180 180, 210 170, 250 168 L 350 168 C 390 170, 420 180, 420 235 L 420 480 C 420 520, 395 530, 350 530 L 250 530 C 205 530, 180 520, 180 480 Z" fill="url(#blackJarBody)"/>
+
+  <!-- Label Background Surface -->
+  <rect x="180" y="235" width="240" height="255" fill="none"/>
+  <rect x="180" y="235" width="240" height="255" fill="url(#triangleGrid)"/>
+
+  <!-- Label Shading / Reflections -->
+  <path d="M 180 235 L 180 490" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3"/>
+  <path d="M 420 235 L 420 490" stroke="#000000" stroke-opacity="0.4" stroke-width="3"/>
+
+  <!-- Graphic Shatter Artwork Background -->
+  <g opacity="0.25">
+    <polygon points="300,250 360,305 325,320" fill="#ffffff"/>
+    <polygon points="230,285 270,300 240,345" fill="#ffffff"/>
+    <polygon points="350,335 385,305 375,360" fill="#ffffff"/>
+    <polygon points="215,315 250,310 230,270" fill="#aaaaaa"/>
+    <polygon points="300,380 340,350 365,370" fill="#777777"/>
+    <polygon points="260,370 235,340 280,385" fill="#555555"/>
+    <polygon points="300,240 320,280 280,280" fill="#dddddd"/>
+  </g>
+
+  <!-- Diamond Frames / Graphic Linework -->
+  <polygon points="300,252 380,330 300,408 220,330" fill="none" stroke="#ffffff" stroke-width="1.8" opacity="0.6"/>
+  <polygon points="300,260 370,330 300,400 230,330" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.3"/>
+
+  <!-- Horizontal Tech Lines -->
+  <line x1="225" y1="365" x2="375" y2="365" stroke="#ffffff" stroke-width="1.2" opacity="0.7"/>
+  <line x1="240" y1="370" x2="360" y2="370" stroke="#ffffff" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- WHEY PROTEIN Brand Text -->
+  <!-- "WHEY" -->
+  <text x="300" y="315" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Impact', 'Arial Black', sans-serif" 
+        font-size="28" 
+        font-weight="900" 
+        letter-spacing="4" 
+        fill="url(#cyanGlow)" 
+        text-anchor="middle">WHEY</text>
+
+  <!-- "PROTEIN" -->
+  <text x="300" y="342" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Impact', 'Arial Black', sans-serif" 
+        font-size="22" 
+        font-weight="900" 
+        letter-spacing="3" 
+        fill="url(#cyanGlow)" 
+        text-anchor="middle">PROTEIN</text>
+
+  <!-- Subtitle: GET HEALTHIER, GET STRONGER -->
+  <text x="300" y="420" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial', sans-serif" 
+        font-size="8.5" 
+        font-weight="800" 
+        letter-spacing="1.2" 
+        fill="#ffffff" 
+        text-anchor="middle" 
+        opacity="0.9">GET HEALTHIER, GET STRONGER</text>
+
+  <!-- Bottom Badges / Detail Text -->
+  <!-- USA Badge Outline -->
+  <g transform="translate(210, 440) scale(0.65)" opacity="0.85">
+    <path d="M 0 0 L 25 0 L 25 15 C 25 28, 12.5 35, 12.5 35 C 12.5 35, 0 28, 0 15 Z" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <text x="12.5" y="10" font-family="'Arial', sans-serif" font-size="6" fill="#fff" text-anchor="middle" font-weight="700">MADE IN THE</text>
+    <text x="12.5" y="24" font-family="'Arial Black', sans-serif" font-size="11" fill="#fff" text-anchor="middle" font-weight="900">USA</text>
+  </g>
+
+  <!-- Middle Specification Bullets -->
+  <g fill="#ffffff" opacity="0.75" font-family="-apple-system, BlinkMacSystemFont, 'Arial', sans-serif" font-size="5" font-weight="600" text-anchor="start">
+    <text x="242" y="446">GRASSFED PROTEINS / NON-GMO</text>
+    <text x="242" y="456">HYDROLYZED WHEY PROTEIN ISOLATE</text>
+    <text x="242" y="466">NO ARTIFICIALS, SWEETENERS, COLORS</text>
+  </g>
+
+  <!-- GMP Stamp Circle -->
+  <g transform="translate(370, 455)" opacity="0.85">
+    <circle cx="0" cy="0" r="14" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="2 1"/>
+    <circle cx="0" cy="0" r="11" fill="none" stroke="#ffffff" stroke-width="0.8"/>
+    <text x="0" y="3.5" font-family="'Arial Black', sans-serif" font-size="7.5" fill="#fff" text-anchor="middle" font-weight="900">GMP</text>
+  </g>
+
+  <!-- Net Weight Text -->
+  <text x="300" y="488" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial', sans-serif" 
+        font-size="5" 
+        font-weight="700" 
+        letter-spacing="0.5" 
+        fill="#ffffff" 
+        text-anchor="middle" 
+        opacity="0.6">NET WEIGHT: 18.8OZ (1.17LBS) (534G)</text>
+
+  <!-- Metallic Chrome Lid -->
+  <!-- Top Surface Rim -->
+  <ellipse cx="300" cy="110" rx="98" ry="12" fill="#dbe1e8"/>
+  <ellipse cx="300" cy="110" rx="96" ry="10" fill="#a4abb2"/>
+
+  <!-- Lid Cylindrical Body -->
+  <path d="M 200 110 L 202 148 C 202 165, 398 165, 398 148 L 400 110 Z" fill="url(#silverLid)"/>
+
+  <!-- Lid Lower Edge Highlight -->
+  <path d="M 202 148 C 202 165, 398 165, 398 148" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.8"/>
+  <!-- Lid Dark Lower Rim Gap -->
+  <path d="M 201 151 C 201 167, 399 167, 399 151" fill="none" stroke="#111111" stroke-width="2"/>
+</svg>
