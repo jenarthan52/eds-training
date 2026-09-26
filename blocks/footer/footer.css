@@ -247,7 +247,7 @@ footer .footer-payment {
   }
 
   footer .default-content-wrapper {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     text-align: left;
   }
@@ -268,7 +268,7 @@ footer .footer-payment {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (width >= 1024px) {
   footer .footer-top > div {
     padding: 94px 32px;
   }

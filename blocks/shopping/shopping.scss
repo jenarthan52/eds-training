@@ -6,7 +6,7 @@ $white: #fff;
 
 // shopping card title
 .shopping-container {
-  padding: 30px 0 90px 0 !important;
+  padding: 30px 0 90px !important;
   background-color: #f7f7f7;
 
   .default-content-wrapper {
@@ -17,7 +17,7 @@ $white: #fff;
     flex-direction: row;
     justify-content: space-between;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (width <= 767px) {
       flex-direction: column;
       margin: 0;
     }
@@ -31,7 +31,7 @@ $white: #fff;
       margin-bottom: 20px;
       border-left: 4px solid $primary-color;
 
-      @media screen and (max-width: 767px) {
+      @media screen and (width <= 767px) {
         margin: 0;
       }
     }
@@ -57,12 +57,12 @@ $white: #fff;
   grid-template-columns: repeat(6, 1fr);
   gap: 50px;
 
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
+  @media screen and (768px <= width <= 1023px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
   // Mobile only
-  @media screen and (max-width: 767px) {
+  @media screen and (width <= 767px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,7 +127,7 @@ $white: #fff;
 
     &:hover {
       border-color: $primary-color;
-      box-shadow: 0px 5px 10px $primary-color;
+      box-shadow: 0 5px 10px $primary-color;
       transition: 0.5s;
       transform: scale(1.1);
     }
