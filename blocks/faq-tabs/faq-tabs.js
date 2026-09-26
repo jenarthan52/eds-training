@@ -9,6 +9,7 @@ export default function decorate(block) {
 
   rows.forEach((row, index) => {
     const [tabCol, contentCol] = row.children;
+    if (!tabCol || !contentCol) return;
 
     // Left Side Navigation Tab
     const tabButton = document.createElement('div');
@@ -39,7 +40,7 @@ export default function decorate(block) {
     headerTitle.innerHTML = tabCol.innerHTML;
     contentBox.appendChild(headerTitle);
 
-    // Question (H3) & Answer (P) parsing for Accordion
+    // Question  & Answer
     const headings = contentCol.querySelectorAll('h3');
     headings.forEach((h3) => {
       const qItem = document.createElement('div');

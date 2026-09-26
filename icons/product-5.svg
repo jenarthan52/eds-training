@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="170 160 260 525" width="100%" height="100%">
+  <defs>
+    <!-- Floor Shadow -->
+    <radialGradient id="jarFloorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.5"/>
+      <stop offset="65%" stop-color="#000000" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Matte Black Jar Body Gradient -->
+    <linearGradient id="jarBodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d0e12"/>
+      <stop offset="10%" stop-color="#24262d"/>
+      <stop offset="28%" stop-color="#464b56"/>
+      <stop offset="48%" stop-color="#18191f"/>
+      <stop offset="78%" stop-color="#3c414a"/>
+      <stop offset="92%" stop-color="#1e2025"/>
+      <stop offset="100%" stop-color="#0b0c0e"/>
+    </linearGradient>
+
+    <!-- Deep Blue Cylindrical Label Gradient -->
+    <linearGradient id="labelBlueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#12183a"/>
+      <stop offset="12%" stop-color="#1c285e"/>
+      <stop offset="35%" stop-color="#2a3d8f"/>
+      <stop offset="65%" stop-color="#1f2d6b"/>
+      <stop offset="85%" stop-color="#32479e"/>
+      <stop offset="100%" stop-color="#111633"/>
+    </linearGradient>
+
+    <!-- Metallic Gold Borders -->
+    <linearGradient id="goldRibbon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8c6b23"/>
+      <stop offset="20%" stop-color="#e8bf5d"/>
+      <stop offset="50%" stop-color="#fced9f"/>
+      <stop offset="80%" stop-color="#d6a743"/>
+      <stop offset="100%" stop-color="#7a5b18"/>
+    </linearGradient>
+
+    <!-- Black Lid Plastic Gradient -->
+    <linearGradient id="lidGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#111215"/>
+      <stop offset="18%" stop-color="#353840"/>
+      <stop offset="40%" stop-color="#555a66"/>
+      <stop offset="55%" stop-color="#1d1e22"/>
+      <stop offset="80%" stop-color="#3a3d46"/>
+      <stop offset="100%" stop-color="#0e0f11"/>
+    </linearGradient>
+
+    <!-- Hexagon Honeycomb Pattern for Label Texture -->
+    <pattern id="hexPattern" width="16" height="27.71" patternUnits="userSpaceOnUse">
+      <path d="M8 0 L16 4.62 L16 13.86 L8 18.48 L0 13.86 L0 4.62 Z M8 27.71 L16 23.09 L16 13.86 L8 18.48 L0 13.86 L0 23.09 Z" fill="none" stroke="#000000" stroke-width="0.8" stroke-opacity="0.32"/>
+      <path d="M8 0 L16 4.62 L16 13.86 L8 18.48 L0 13.86 L0 4.62 Z" fill="none" stroke="#5d78d4" stroke-width="0.5" stroke-opacity="0.12"/>
+    </pattern>
+
+    <!-- Cap Grooves / Teeth Pattern -->
+    <pattern id="capRidges" width="14" height="42" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="8" height="42" fill="#0c0d0f"/>
+      <rect x="8" y="0" width="6" height="42" fill="#3e434d" opacity="0.6"/>
+      <line x1="8" y1="0" x2="8" y2="42" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <!-- Ground Base Shadow -->
+  <ellipse cx="300" cy="668" rx="118" ry="11" fill="url(#jarFloorShadow)"/>
+
+  <!-- Bottle Body (Black Plastic Jar) -->
+  <path d="M 184 360 C 184 270, 220 248, 255 244 L 345 244 C 380 248, 416 270, 416 360 L 416 590 C 416 645, 385 662, 345 662 L 255 662 C 215 662, 184 645, 184 590 Z" fill="url(#jarBodyGrad)"/>
+
+  <!-- Shoulder Soft Light Reflection -->
+  <path d="M 205 340 C 210 270, 245 250, 300 250" stroke="#ffffff" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.18"/>
+  <ellipse cx="300" cy="254" rx="72" ry="7" fill="#ffffff" opacity="0.08"/>
+
+  <!-- ==================== LABEL SECTION ==================== -->
+  <!-- Label Base Container -->
+  <path d="M 184 374 L 184 572 C 184 582, 416 582, 416 572 L 416 374 C 416 364, 184 364, 184 374 Z" fill="url(#labelBlueGrad)"/>
+
+  <!-- Honeycomb Texture Layer -->
+  <path d="M 184 374 L 184 572 C 184 582, 416 582, 416 572 L 416 374 C 416 364, 184 364, 184 374 Z" fill="url(#hexPattern)"/>
+
+  <!-- Top & Bottom Metallic Gold Borders -->
+  <path d="M 184 380 C 240 366, 360 366, 416 380 L 416 390 C 360 376, 240 376, 184 390 Z" fill="url(#goldRibbon)"/>
+  <path d="M 184 564 C 240 576, 360 576, 416 564 L 416 574 C 360 586, 240 586, 184 574 Z" fill="url(#goldRibbon)"/>
+
+  <!-- Left Edge Vertical Text (ATHLETE TESTED) -->
+  <text x="-470" y="206" 
+        transform="rotate(-90)" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial', sans-serif" 
+        font-size="4.5" 
+        font-weight="700" 
+        letter-spacing="1.2" 
+        fill="#ffffff" 
+        opacity="0.45">ATHLETE TESTED  •  ATHLETE TESTED  •  ATHLETE TESTED  •  ATHLETE TESTED</text>
+
+  <!-- Right Edge Vertical Text -->
+  <text x="-470" y="398" 
+        transform="rotate(-90)" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial', sans-serif" 
+        font-size="4.5" 
+        font-weight="700" 
+        letter-spacing="1.2" 
+        fill="#ffffff" 
+        opacity="0.45">ATHLETE TESTED  •  ATHLETE TESTED  •  ATHLETE TESTED  •  ATHLETE TESTED</text>
+
+  <!-- "NEW LEAN PROTEIN FORMULAE" Gold Tag -->
+  <g id="newTag">
+    <rect x="214" y="372" width="38" height="40" rx="2" fill="url(#goldRibbon)"/>
+    <text x="233" y="398" 
+          font-family="-apple-system, BlinkMacSystemFont, 'Impact', 'Arial Black', sans-serif" 
+          font-size="18" 
+          font-weight="900" 
+          letter-spacing="0.5" 
+          fill="#1c2552" 
+          text-anchor="middle">NEW</text>
+    <text x="233" y="405" 
+          font-family="'Arial', sans-serif" 
+          font-size="4.2" 
+          font-weight="800" 
+          letter-spacing="0.3" 
+          fill="#1c2552" 
+          text-anchor="middle">LEAN PROTEIN</text>
+    <text x="233" y="410" 
+          font-family="'Arial', sans-serif" 
+          font-size="3.6" 
+          font-weight="800" 
+          letter-spacing="0.6" 
+          fill="#1c2552" 
+          text-anchor="middle">FORMULAE</text>
+  </g>
+
+  <!-- Typography: HIGH PROTEIN SUPPLEMENT shake -->
+  <!-- "HIGH" -->
+  <text x="220" y="434" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial Black', sans-serif" 
+        font-size="9" 
+        font-weight="900" 
+        letter-spacing="1" 
+        fill="#ffffff" 
+        opacity="0.9">HIGH</text>
+
+  <!-- "PROTEIN" -->
+  <text x="220" y="456" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Impact', 'Arial Black', sans-serif" 
+        font-size="23" 
+        font-weight="900" 
+        letter-spacing="1.2" 
+        fill="#ffffff">PROTEIN</text>
+
+  <!-- "SUPPLEMENT" -->
+  <text x="220" y="476" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Impact', 'Arial Black', sans-serif" 
+        font-size="18" 
+        font-weight="900" 
+        letter-spacing="1" 
+        fill="#ffffff">SUPPLEMENT</text>
+
+  <!-- "shake" (Script/Italic style) -->
+  <text x="312" y="492" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial', sans-serif" 
+        font-size="13" 
+        font-style="italic" 
+        font-weight="700" 
+        letter-spacing="1.5" 
+        fill="#fed362" 
+        text-anchor="end">shake</text>
+
+  <!-- Gold Accent Pill / Banner: ALL NATURAL INGREDIENTS -->
+  <rect x="212" y="522" width="94" height="10" rx="1.5" fill="url(#goldRibbon)"/>
+  <text x="259" y="529.2" 
+        font-family="'Arial', sans-serif" 
+        font-size="5" 
+        font-weight="900" 
+        letter-spacing="0.6" 
+        fill="#1a1c24" 
+        text-anchor="middle">ALL NATURAL INGREDIENTS</text>
+
+  <!-- Weight Badge Box: 500gm -->
+  <rect x="348" y="548" width="38" height="24" rx="2" fill="#ffffff" stroke="#c4ccd6" stroke-width="1.2"/>
+  <text x="367" y="565" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial Black', sans-serif" 
+        font-size="9.5" 
+        font-weight="900" 
+        letter-spacing="0.2" 
+        fill="#1e244d" 
+        text-anchor="middle">500gm</text>
+  <!-- ==================== LABEL END ==================== -->
+
+  <!-- Plastic Surface Vertical Glare Reflection -->
+  <path d="M 186 380 L 186 565" stroke="#ffffff" stroke-width="4" opacity="0.14" stroke-linecap="round"/>
+  <path d="M 414 380 L 414 565" stroke="#ffffff" stroke-width="2.5" opacity="0.1" stroke-linecap="round"/>
+
+  <!-- Bottle Bottom Curvature Rim Highlight -->
+  <path d="M 210 652 Q 300 664 390 652" stroke="#4b505c" stroke-width="3" fill="none" opacity="0.5"/>
+
+  <!-- ==================== CAP / LID (FULLY CLOSED) ==================== -->
+  <!-- Cap Top Rim Curve -->
+  <ellipse cx="300" cy="184" rx="69" ry="8" fill="#32353d"/>
+  <ellipse cx="300" cy="182" rx="67" ry="7" fill="#1b1c20"/>
+
+  <!-- Cap Cylindrical Body -->
+  <path d="M 230 184 L 230 244 C 230 252, 370 252, 370 244 L 370 184 Z" fill="url(#lidGrad)"/>
+
+  <!-- Cap Vertical Gripping Ridges Texture -->
+  <rect x="230" y="186" width="140" height="42" fill="url(#capRidges)"/>
+
+  <!-- Cap Specular Highlighting -->
+  <rect x="250" y="184" width="18" height="60" fill="#ffffff" opacity="0.08"/>
+  <rect x="330" y="184" width="14" height="60" fill="#ffffff" opacity="0.05"/>
+
+  <!-- Cap Bottom Lip/Collar touching Jar Shoulders -->
+  <path d="M 229 238 L 229 246 C 229 253, 371 253, 371 246 L 371 238 Z" fill="#0d0e10"/>
+  <line x1="229" y1="238" x2="371" y2="238" stroke="#3d424b" stroke-width="1.5"/>
+</svg>

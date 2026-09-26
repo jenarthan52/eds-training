@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Shadow Gradient -->
+    <radialGradient id="dropShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Amber Bottle Body Gradient -->
+    <linearGradient id="amberJar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a1a06"/>
+      <stop offset="12%" stop-color="#913d14"/>
+      <stop offset="25%" stop-color="#ba551d"/>
+      <stop offset="50%" stop-color="#6e2b0b"/>
+      <stop offset="80%" stop-color="#b04e19"/>
+      <stop offset="93%" stop-color="#612309"/>
+      <stop offset="100%" stop-color="#2a0d02"/>
+    </linearGradient>
+
+    <!-- Capsule Color Gradients -->
+    <linearGradient id="capsuleGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f58c42"/>
+      <stop offset="40%" stop-color="#c45314"/>
+      <stop offset="100%" stop-color="#592004"/>
+    </linearGradient>
+
+    <linearGradient id="capsuleGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fba158"/>
+      <stop offset="50%" stop-color="#b54a10"/>
+      <stop offset="100%" stop-color="#451703"/>
+    </linearGradient>
+
+    <!-- Black Cap Gradient -->
+    <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#141416"/>
+      <stop offset="15%" stop-color="#3b3d43"/>
+      <stop offset="35%" stop-color="#555861"/>
+      <stop offset="50%" stop-color="#2c2d32"/>
+      <stop offset="75%" stop-color="#44464d"/>
+      <stop offset="90%" stop-color="#232427"/>
+      <stop offset="100%" stop-color="#0f1011"/>
+    </linearGradient>
+
+    <!-- Cap Top Bevel -->
+    <linearGradient id="capTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a4c54"/>
+      <stop offset="100%" stop-color="#1f2024"/>
+    </linearGradient>
+
+    <!-- Glass Specular Highlight -->
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="250" cy="415" rx="100" ry="14" fill="url(#dropShadow)"/>
+
+  <!-- Bottle Neck (Behind Cap) -->
+  <rect x="175" y="160" width="150" height="20" rx="4" fill="#3d1405"/>
+
+  <!-- Amber Glass Body Outer Base -->
+  <rect x="160" y="170" width="180" height="235" rx="36" fill="url(#amberJar)"/>
+
+  <!-- Internal Soft Glow / Depth Behind Capsules -->
+  <rect x="165" y="175" width="170" height="225" rx="30" fill="#2d0f04" opacity="0.6"/>
+
+  <!-- Group of Capsules Inside Bottle -->
+  <g id="capsules">
+    <!-- Deep Layer Capsules -->
+    <rect x="180" y="270" width="30" height="65" rx="15" transform="rotate(-30 195 302)" fill="url(#capsuleGrad1)" opacity="0.8"/>
+    <rect x="290" y="280" width="30" height="65" rx="15" transform="rotate(35 305 312)" fill="url(#capsuleGrad2)" opacity="0.8"/>
+    <rect x="235" y="295" width="30" height="65" rx="15" transform="rotate(15 250 327)" fill="url(#capsuleGrad1)" opacity="0.85"/>
+    <rect x="200" y="325" width="30" height="65" rx="15" transform="rotate(75 215 357)" fill="url(#capsuleGrad2)" opacity="0.9"/>
+    <rect x="260" y="335" width="30" height="65" rx="15" transform="rotate(-60 275 367)" fill="url(#capsuleGrad1)" opacity="0.9"/>
+
+    <!-- Mid & Foreground Capsules -->
+    <rect x="185" y="180" width="28" height="62" rx="14" transform="rotate(22 199 211)" fill="url(#capsuleGrad1)"/>
+    <rect x="225" y="175" width="28" height="62" rx="14" transform="rotate(-15 239 206)" fill="url(#capsuleGrad2)"/>
+    <rect x="270" y="185" width="28" height="62" rx="14" transform="rotate(38 284 216)" fill="url(#capsuleGrad1)"/>
+
+    <rect x="175" y="330" width="30" height="65" rx="15" transform="rotate(50 190 362)" fill="url(#capsuleGrad1)"/>
+    <rect x="215" y="350" width="28" height="65" rx="14" transform="rotate(85 229 382)" fill="url(#capsuleGrad2)"/>
+    <rect x="270" y="340" width="29" height="65" rx="14.5" transform="rotate(-40 284 372)" fill="url(#capsuleGrad1)"/>
+    <rect x="235" y="325" width="30" height="65" rx="15" transform="rotate(-5 250 357)" fill="url(#capsuleGrad2)"/>
+  </g>
+
+  <!-- Semi-Transparent Glass Overlay -->
+  <rect x="160" y="170" width="180" height="235" rx="36" fill="url(#amberJar)" opacity="0.45"/>
+
+  <!-- Left Specular Reflection Line -->
+  <path d="M 172 195 Q 170 290 172 385" stroke="url(#glassReflection)" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Right Rim Subdued Reflection -->
+  <path d="M 328 195 Q 330 290 328 385" stroke="#ffffff" stroke-width="2.5" stroke-opacity="0.25" stroke-linecap="round" fill="none"/>
+
+  <!-- Jar Label Mockup Graphic -->
+  <!-- Main "MOCKUP" Big Bold Text -->
+  <text x="250" y="310" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Impact', 'Montserrat', 'Arial Black', sans-serif" 
+        font-size="62" 
+        font-weight="900" 
+        letter-spacing="2" 
+        fill="#ffffff" 
+        text-anchor="middle"
+        opacity="0.95">MOCKUP</text>
+
+  <!-- Top Label Header Text -->
+  <text x="250" y="240" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Arial', sans-serif" 
+        font-size="16" 
+        font-weight="700" 
+        letter-spacing="2.5" 
+        fill="#ffffff" 
+        text-anchor="middle"
+        opacity="0.9">PILLS BOTTLE</text>
+
+  <!-- Smaller Subtext / Specifications -->
+  <g fill="#ffffff" opacity="0.85" font-family="-apple-system, BlinkMacSystemFont, 'Arial', sans-serif" font-size="7.5" font-weight="600">
+    <text x="250" y="332" text-anchor="middle" letter-spacing="0.5">AMBER GLASS BODY AND BLACK PLASTIC CAP</text>
+    
+    <circle cx="205" cy="348" r="2.2" fill="#ffffff"/>
+    <text x="213" y="350.5" letter-spacing="0.5">SMART OBJECT</text>
+
+    <circle cx="205" cy="361" r="2.2" fill="#ffffff"/>
+    <text x="213" y="363.5" letter-spacing="0.5">WRAPPED LABEL</text>
+  </g>
+
+  <!-- Black Cap (Lid) -->
+  <!-- Cap Top Rim Curve -->
+  <path d="M 170 106 C 170 94, 330 94, 330 106 L 330 114 L 170 114 Z" fill="url(#capTop)"/>
+  <ellipse cx="250" cy="104" rx="77" ry="14" fill="#32343a"/>
+
+  <!-- Cap Main Body -->
+  <rect x="160" y="102" width="174" height="74" rx="14" fill="url(#capGrad)"/>
+
+  <!-- Cap Horizontal Ring/Groove Detail -->
+  <line x1="160" y1="156" x2="334" y2="156" stroke="#000000" stroke-width="2.5"/>
+  <line x1="160" y1="158" x2="334" y2="158" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.2"/>
+
+  <!-- Cap Vertical Light Highlight -->
+  <rect x="182" y="104" width="16" height="70" fill="#ffffff" opacity="0.08"/>
+</svg>
