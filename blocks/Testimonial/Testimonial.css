@@ -143,7 +143,7 @@
     transform: translateY(-6px);
     box-shadow: 0 12px 28px rgb(0 0 0 / 12%);
   }
-  
+
   .testimonial .testimonial-card:hover::after {
     transform: scaleX(1);
   }
@@ -152,4 +152,6 @@
     box-shadow: 0 0 0 4px #22c55e;
     scale: 1.05;
   }
-}/*# sourceMappingURL=Testimonial.css.map */
+}
+
+/*# sourceMappingURL=Testimonial.css.map */

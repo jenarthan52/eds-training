@@ -12,16 +12,16 @@
   background-color: #f7f7f7;
 }
 
+img,
+picture {
+  max-width: 100%;
+}
+
 .default-content-wrapper {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   padding: 20px !important;
-}
-
-img,
-picture {
-  max-width: 100%;
 }
 
 .card {
@@ -33,10 +33,6 @@ picture {
   width: 100%;
   box-sizing: border-box;
   max-width: 100%;
-}
-
-.card * {
-  box-sizing: border-box;
 }
 
 .card .custom-card {
@@ -75,16 +71,17 @@ picture {
   transform: scale(1.05);
 }
 
-.custom-article {
-  padding: 40px 0 60px;
+.custom-product {
+  max-width: 1307px;
+  margin: auto !important;
+  background-color: #fff;
+  padding: 42px 60px;
 }
 
-.card.article {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px;
-  margin: 0 auto;
-  padding: 0 26px;
+@media screen and (width <= 767px) {
+  .custom-product {
+    padding: 40px 30px;
+  }
 }
 
 .card.product {
@@ -190,6 +187,18 @@ picture {
 
 .card.product .custom-card > div:last-child {
   padding: 30px 20px;
+}
+
+.custom-article {
+  padding: 40px 0 60px;
+}
+
+.card.article {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  margin: 0 auto;
+  padding: 0 26px;
 }
 
 .card.article .custom-card:hover {
@@ -303,37 +312,18 @@ picture {
   }
 }
 
-.custom-product {
-  max-width: 1307px;
-  margin: auto !important;
-  background-color: #fff;
-  padding: 42px 60px;
-}
-
-@media screen and (width <= 767px) {
-  .custom-product {
-    padding: 40px 30px;
-  }
-}
-
-.card-container .default-content-wrapper,
-.faq-tabs-container .default-content-wrapper,
-.testimonial-container .default-content-wrapper {
+.card-container .default-content-wrapper, .faq-tabs-container .default-content-wrapper, .testimonial-container .default-content-wrapper {
   text-align: center;
   padding: 20px 20% !important;
 }
 
 @media screen and (width <= 767px) {
-  .card-container .default-content-wrapper,
-  .faq-tabs-container .default-content-wrapper,
-  .testimonial-container .default-content-wrapper {
+  .card-container .default-content-wrapper, .faq-tabs-container .default-content-wrapper, .testimonial-container .default-content-wrapper {
     padding: 5px !important;
   }
 }
 
-.card-container .default-content-wrapper h2,
-.faq-tabs-container .default-content-wrapper h2,
-.testimonial-container .default-content-wrapper h2 {
+.card-container .default-content-wrapper h2, .faq-tabs-container .default-content-wrapper h2, .testimonial-container .default-content-wrapper h2 {
   font-size: 32px;
   font-weight: 900;
   line-height: 1.2;
@@ -341,13 +331,15 @@ picture {
   margin-bottom: 20px;
 }
 
-.card-container .default-content-wrapper p,
-.faq-tabs-container .default-content-wrapper p,
-.testimonial-container .default-content-wrapper p {
+.card-container .default-content-wrapper p, .faq-tabs-container .default-content-wrapper p, .testimonial-container .default-content-wrapper p {
   font-size: 16px;
   line-height: 1.6;
   color: #666;
   margin-bottom: 40px;
+}
+
+.card * {
+  box-sizing: border-box;
 }
 
 @media screen and (width <= 767px) {
@@ -371,4 +363,4 @@ picture {
   .default-content-wrapper {
     padding: 20px 15px !important;
   }
-}/*# sourceMappingURL=card.css.map */
+}

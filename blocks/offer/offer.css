@@ -25,7 +25,6 @@
 
     padding-top: 107px;
   }
-  
 }
 
 @media screen and (width <= 767px) {
@@ -36,7 +35,6 @@
 
     padding-top: 67px;
   }
-
 }
 
 @media screen and (768px <= width <= 1023px) {
@@ -69,7 +67,7 @@
     grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas: "sub   cta" "title cta";
     align-items: center;
-    column-gap: 32px;
+        column-gap: 32px;
     min-height: var(--offer-band-height);
     padding-top: 0;
     padding-bottom: 0;
