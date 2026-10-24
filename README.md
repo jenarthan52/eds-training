@@ -2,8 +2,7 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+- Live: https:https://dev--eds-training--jenarthan52.aem.live/
 
 ## Documentation
 
