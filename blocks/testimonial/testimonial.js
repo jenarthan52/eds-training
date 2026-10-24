@@ -13,7 +13,7 @@ export default function decorate(block) {
     const role = paragraphs.length > 1 ? paragraphs[0] : null;
     role?.classList.add('testimonial-role');
     quote?.classList.add('testimonial-quote');
-    // Avatar + (name | role)
+    // Avatar
     const info = document.createElement('div');
     info.classList.add('testimonial-info');
     if (name) info.append(name);
