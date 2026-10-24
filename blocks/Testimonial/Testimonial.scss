@@ -3,6 +3,7 @@ $card-radius: 10px;
 $card-padding: 40px;
 $text: #333;
 $name-color: #444;
+$card-white: #fff;
 
 $avatar-size: 80px;
 $gap: 30px;
@@ -138,7 +139,7 @@ $bp-mobile: 480px;
 
   @media (hover: hover) {
     .testimonial-card:hover {
-      background: #fff;
+      background: $card-white;
       transform: translateY(-6px);
       box-shadow: 0 12px 28px rgb(0 0 0 / 12%);
 
