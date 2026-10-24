@@ -139,6 +139,10 @@ footer .footer-col-links ul li p {
   color:#fff;
 }
 
+footer .footer-col-links ul li p:hover {
+  color: #007bff;;
+}
+
 /* ===== Recent posts column ===== */
 footer .footer-col-posts ul,
 footer .footer-col-posts {
@@ -197,6 +201,10 @@ footer .footer-col-company ul li {
   font-size: 16px;
   font-weight: 500;
   color:#fff;
+}
+
+footer .footer-col-company ul li:hover {
+  color: #007bff;
 }
 
 /* ===== bottom bar ===== */
@@ -278,3 +286,4 @@ footer .footer-payment {
     gap: 32px;
   }
 }
+

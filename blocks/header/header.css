@@ -1,5 +1,6 @@
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 100%;
   max-width: 100%;
   margin: 0;
@@ -419,6 +420,11 @@ header nav .nav-sections
     margin: 0;
     line-height: 1;
   }
+
+  header nav .nav-sections
+    .default-content-wrapper > ul > li p:hover {
+    color: red;
+  }
 }
 
 @media (600px <= width <= 1099px) {
@@ -715,4 +721,20 @@ header .nav-wrapper,
 header nav {
   max-width: 100%;
   box-sizing: border-box;
+}
+
+main .section[id] {
+  scroll-margin-top: 84px;
+}
+
+@media (600px <= width <= 1099px) {
+  main .section[id] {
+    scroll-margin-top: 76px;
+  }
+}
+
+@media (width <= 599px) {
+  main .section[id] {
+    scroll-margin-top: 68px;
+  }
 }

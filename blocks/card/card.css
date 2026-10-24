@@ -1,3 +1,15 @@
+img,
+picture {
+  max-width: 100%;
+}
+
+.default-content-wrapper {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 20px !important;
+}
+
 .card-container {
   background-color: #f7f7f7;
 }
@@ -10,18 +22,6 @@
 
 .bg-card {
   background-color: #f7f7f7;
-}
-
-img,
-picture {
-  max-width: 100%;
-}
-
-.default-content-wrapper {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 20px !important;
 }
 
 .card {
@@ -119,7 +119,7 @@ picture {
 }
 
 .card.product .custom-card:hover .custom-card-image {
-  transform: scale(1.07);
+  transform: scale(1.03);
 }
 
 .card.product .custom-card .custom-card-image-wrapper {
@@ -249,6 +249,10 @@ picture {
   border-radius: 20px;
 }
 
+.card.article .custom-card .custom-card-image-wrapper .article-date:hover {
+  background: #0056b3;
+}
+
 .card.article .custom-card .article-meta {
   display: flex;
   align-items: center;
@@ -338,29 +342,175 @@ picture {
   margin-bottom: 40px;
 }
 
-.card * {
-  box-sizing: border-box;
+/* ===== Tablet (768px - 1023px) ===== */
+@media screen and (768px <= width <= 1023px) {
+  .card-container .default-content-wrapper,
+  .faq-tabs-container .default-content-wrapper,
+  .testimonial-container .default-content-wrapper {
+    padding: 20px 10% !important;
+  }
+
+  .card-container .default-content-wrapper h2,
+  .faq-tabs-container .default-content-wrapper h2,
+  .testimonial-container .default-content-wrapper h2 {
+    font-size: 28px;
+  }
+
+  .card-container .default-content-wrapper p,
+  .faq-tabs-container .default-content-wrapper p,
+  .testimonial-container .default-content-wrapper p {
+    margin-bottom: 30px;
+  }
+
+  .card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    padding: 50px 20px;
+  }
+
+  .card .custom-card {
+    padding: 32px 20px;
+  }
+
+  .custom-product {
+    padding: 40px 30px;
+  }
+
+  .card.product {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    padding: 30px 0;
+  }
+
+  .card.product .custom-card .custom-card-image-wrapper {
+    height: 220px;
+  }
+
+  .card.product .custom-card .custom-card-title {
+    font-size: 18px;
+  }
+
+  .custom-article {
+    padding: 30px 0 50px;
+  }
+
+  .card.article {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .card.article .custom-card {
+    min-height: 0;
+  }
+
+  .card.article .custom-card .custom-card-image-wrapper {
+    height: 230px;
+  }
+
+  .card.article .custom-card .article-title {
+    font-size: 18px;
+  }
 }
 
+/* ===== Mobile (<= 767px) ===== */
 @media screen and (width <= 767px) {
+  .card-container .default-content-wrapper,
+  .faq-tabs-container .default-content-wrapper,
+  .testimonial-container .default-content-wrapper {
+    padding: 10px 15px !important;
+  }
+
+  .card-container .default-content-wrapper h2,
+  .faq-tabs-container .default-content-wrapper h2,
+  .testimonial-container .default-content-wrapper h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .card-container .default-content-wrapper p,
+  .faq-tabs-container .default-content-wrapper p,
+  .testimonial-container .default-content-wrapper p {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
   .card {
     grid-template-columns: 1fr;
-    padding: 40px 15px;
     gap: 20px;
+    padding: 30px 15px;
+  }
+
+  .card .custom-card {
+    padding: 28px 20px;
+  }
+
+  .card .custom-card:hover {
+    transform: none;
+  }
+
+  .custom-product {
+    padding: 30px 15px;
   }
 
   .card.product {
     grid-template-columns: 1fr;
-    padding: 30px 15px;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .card.product .custom-card {
+    margin-bottom: 0;
+  }
+
+  .card.product .custom-card .custom-card-image-wrapper {
+    height: 220px;
+  }
+
+  .card.product .custom-card .custom-card-title {
+    min-height: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+
+  .card.product .custom-card > div:last-child {
+    padding: 20px 16px;
+  }
+
+  .card.product .custom-card .product-button-wrapper {
+    margin-top: 20px;
+  }
+
+  .card.product .custom-card .product-button-wrapper .product-button {
+    font-size: 14px;
+    padding: 12px 40px;
+  }
+
+  .custom-article {
+    padding: 30px 0 40px;
   }
 
   .card.article {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 30px 15px;
+    padding: 0 15px;
   }
 
-  .default-content-wrapper {
-    padding: 20px 15px !important;
+  .card.article .custom-card {
+    min-height: 0;
+  }
+
+  .card.article .custom-card > div:not(.custom-card-image-wrapper) {
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .card.article .custom-card .custom-card-image-wrapper {
+    height: 210px;
+  }
+
+  .card.article .custom-card .article-title {
+    font-size: 18px;
+    line-height: 1.5;
   }
 }
