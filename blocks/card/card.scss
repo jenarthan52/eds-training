@@ -14,7 +14,7 @@ $text-dark: #333;
 $text-description: #545454;
 $border-light: #e0e0e0;
 $border-lighter: #e5e5e5;
-$shadow-dark: #333333;
+$shadow-dark: #333;
 $rating-color: #ffb400;
 $button-bg: #087ff5;
 $button-hover: #0056b3;
@@ -108,7 +108,7 @@ $gap: 30px;
             transform: translateY(-8px);
             box-shadow: 0 15px 35px rgb(0,0,0,12%);
             cursor: pointer;
-            .custom-card-image{transform: scale(1.07);}
+            .custom-card-image{transform: scale(1.03);}
         }
         .custom-card-image-wrapper {
             height: 245px;
@@ -233,6 +233,9 @@ $gap: 30px;
                 color: $badge-text;
                 background: $badge-bg;
                 border-radius: 20px;
+                &:hover {
+                    background: $button-hover;
+                }
             }
         }
         .article-meta {
@@ -320,10 +323,6 @@ $gap: 30px;
   max-width: 100%;
 }
 
-.card * {
-  box-sizing: border-box;
-}
-
 .default-content-wrapper {
   width: 100%;
   max-width: 100%;
@@ -335,26 +334,178 @@ img,
 picture {
   max-width: 100%;
 }
+/* ===== Tablet (768px - 1023px) ===== */
+@media screen and (768px <= width <= 1023px) {
+  .card-container,
+  .faq-tabs-container,
+  .testimonial-container {
+    .default-content-wrapper {
+      padding: 20px 10% !important;
 
+      h2 {
+        font-size: 28px;
+      }
+
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    padding: 50px 20px;
+
+    .custom-card {
+      padding: 32px 20px;
+    }
+  }
+
+  // product cards
+  .custom-product {
+    padding: 40px 30px;
+  }
+
+  .card.product {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    padding: 30px 0;
+
+    .custom-card {
+      .custom-card-image-wrapper {
+        height: 220px;
+      }
+
+      .custom-card-title {
+        font-size: 18px;
+      }
+    }
+  }
+
+  // article cards
+  .custom-article {
+    padding: 30px 0 50px;
+  }
+
+  .card.article {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    padding: 0 20px;
+
+    .custom-card {
+      min-height: 0;
+
+      .custom-card-image-wrapper {
+        height: 230px;
+      }
+
+      .article-title {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* ===== Mobile (<= 767px) ===== */
 @media screen and (width <= 767px) {
+  .card-container,
+  .faq-tabs-container,
+  .testimonial-container {
+    .default-content-wrapper {
+      padding: 10px 15px !important;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  // feature cards (1 column)
   .card {
     grid-template-columns: 1fr;
-    padding: 40px 15px;
     gap: 20px;
+    padding: 30px 15px;
+
+    .custom-card {
+      padding: 28px 20px;
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+
+  // product cards
+  .custom-product {
+    padding: 30px 15px;
   }
 
   .card.product {
     grid-template-columns: 1fr;
-    padding: 30px 15px;
+    gap: 20px;
+    padding: 20px 0;
+
+    .custom-card {
+      margin-bottom: 0;
+
+      .custom-card-image-wrapper {
+        height: 220px;
+      }
+
+      .custom-card-title {
+        min-height: 0;
+        margin-bottom: 16px;
+        font-size: 18px;
+      }
+
+      > div:last-child {
+        padding: 20px 16px;
+      }
+
+      .product-button-wrapper {
+        margin-top: 20px;
+
+        .product-button {
+            font-size: 14px;
+          padding: 12px 40px;
+        }
+      }
+    }
+  }
+
+  // article cards
+  .custom-article {
+    padding: 30px 0 40px;
   }
 
   .card.article {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 30px 15px;
-  }
+    padding: 0 15px;
 
-  .default-content-wrapper {
-    padding: 20px 15px !important;
+    .custom-card {
+      min-height: 0;
+
+      > div:not(.custom-card-image-wrapper) {
+        gap: 14px;
+        padding: 20px;
+      }
+
+      .custom-card-image-wrapper {
+        height: 210px;
+      }
+
+      .article-title {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
   }
 }

@@ -1,4 +1,15 @@
 export default function decorate(block) {
+  const section = block.closest('.section');
+  if (section && !section.id) {
+    let sectionId = 'feature';
+    if (block.classList.contains('product')) sectionId = 'products';
+    if (block.classList.contains('article')) sectionId = 'blog';
+
+    // same id already vera section la irundha, duplicate aagaama first ku mattum
+    if (!document.getElementById(sectionId)) {
+      section.id = sectionId;
+    }
+  }
   const cards = [...block.children];
   cards.forEach((card) => {
     card.classList.add('custom-card');

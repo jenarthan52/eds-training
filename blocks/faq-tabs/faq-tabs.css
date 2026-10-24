@@ -132,8 +132,7 @@
   color: #fff;
 }
 
-.faq-tabs .faq-display-side .content-box .q-item .q-header .toggle-icon::before,
-.faq-tabs .faq-display-side .content-box .q-item .q-header .toggle-icon::after {
+.faq-tabs .faq-display-side .content-box .q-item .q-header .toggle-icon::before, .faq-tabs .faq-display-side .content-box .q-item .q-header .toggle-icon::after {
   content: "";
   position: absolute;
   background-color: #333;
@@ -269,4 +268,4 @@
   .faq-tabs .faq-display-side {
     width: 65%;
   }
-}/*# sourceMappingURL=faq-tabs.css.map */
+}

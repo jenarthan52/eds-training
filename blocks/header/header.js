@@ -223,6 +223,35 @@ export default async function decorate(block) {
 
         navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
       });
+
+      /*
+       * Smooth scroll for menu items (no dropdown)
+       */
+      if (!navSection.querySelector('ul')) {
+        navSection.addEventListener('click', () => {
+          const anchor = navSection.querySelector('a[href^="#"]');
+          const id = anchor
+            ? anchor.getAttribute('href').slice(1)
+            : navSection.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+
+          const target = document.getElementById(id);
+
+          if (!target && id !== 'home') return;
+
+          // mobile la menu close pannitu scroll pannum
+          if (!isDesktop.matches && nav.getAttribute('aria-expanded') === 'true') {
+            toggleMenu(nav, navSections);
+          }
+
+          requestAnimationFrame(() => {
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          });
+        });
+      }
     });
   }
 
